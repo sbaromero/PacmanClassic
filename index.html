@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PacMan Clásico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PacMan Clásico</h1>
+        <p class="author">by Seba Romero</p>
+        <div class="game-info">
+            <div class="score">Puntuación: <span id="score">0</span></div>
+            <div class="lives">Vidas: <span id="lives">3</span></div>
+            <div class="level">Nivel: <span id="level">1</span></div>
+        </div>
+        <div class="game-container">
+            <canvas id="gameCanvas" width="600" height="450"></canvas>
+            <div class="game-over" id="gameOver" style="display: none;">
+                <h2>¡Juego Terminado!</h2>
+                <p>Puntuación Final: <span id="finalScore">0</span></p>
+                <button id="restartBtn">Jugar de Nuevo</button>
+            </div>
+            <div class="game-paused" id="gamePaused" style="display: none;">
+                <h2>Juego Pausado</h2>
+                <p>Presiona ESPACIO para continuar</p>
+            </div>
+        </div>
+        <div class="controls">
+            <h3>Controles:</h3>
+            <p>Usa las flechas del teclado o WASD para mover a PacMan</p>
+            <p>Presiona ESPACIO para pausar</p>
+            <div class="mobile-controls" id="mobileControls">
+                <button class="control-btn" id="upBtn">↑</button>
+                <div class="horizontal-controls">
+                    <button class="control-btn" id="leftBtn">←</button>
+                    <button class="control-btn" id="downBtn">↓</button>
+                    <button class="control-btn" id="rightBtn">→</button>
+                </div>
+                <button class="control-btn pause-btn" id="pauseBtn">⏸️</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
